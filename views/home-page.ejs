@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center; background-color: gray">
+    <h1>Home Page</h1>
+    <main style="display: flex; justify-content: center">
+      <form
+        action="/check-user"
+        method="post"
+        style="border: 1px solid lightgray; padding: 30px;background-color: white;"
+      >
+        <label for="userame">Username:&ensp;</label>
+        <input type="text" name="username" id="username" />
+        <br /><br />
+        <label for="password">Password:&ensp;</label>
+        <input type="password" name="password" id="password" />
+        <br /><br />
+        <button type="submit">Log-In</button>
+      </form>
+    </main>
+  </body>
+</html>

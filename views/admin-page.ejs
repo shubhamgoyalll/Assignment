@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+  </head>
+  <body style="padding: 50px">
+    <h1>Admin Page</h1>
+    <form
+      action="/create-user"
+      method="post"
+      style="border: 1px solid gray; padding: 10px; width: 500px"
+    >
+      <label for="userame">Username:&ensp;</label>
+      <input type="text" name="username" id="username" />
+      <br /><br />
+      <label for="password">Password:&ensp;</label>
+      <input type="password" name="password" id="password" />
+      <br /><br />
+      <button type="submit">Create User</button>
+    </form>
+    <% for( i of user_list){%>
+    <div>
+      <ul>
+        <li style="border: 1px solid lightgray; width: 300px; padding: 5px">
+          <p><b>Username: <%=i.username%></b></p>
+          <p><span class="text-dark">Password:</span>&nbsp;<%=i.password%></p>
+
+          <button type="button" class="delete-button btn btn-danger">
+            <a class="text-white" href="/delete-user"> Delete </a>
+          </button>
+          <button type="button">
+            <a href="/update-user">Update</a>
+          </button>
+        </li>
+        <br /><br />
+      </ul>
+    </div>
+    <%}%>
+  </body>
+</html>
